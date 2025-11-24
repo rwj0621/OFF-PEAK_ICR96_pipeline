@@ -39,3 +39,4 @@
 * 序列比对 [step03_alignment_trimmed.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step03_alignment_trimmed.sh)
 * 标记重复  [step04_mark_duplicates.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step04_mark_duplicates.sh)
 * 碱基质量重新校对  [step05_bqsr.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step05_bqsr.sh)
+# 四、[OFF-PEAK](https://github.com/mquinodo/OFF-PEAK)  pipeline
