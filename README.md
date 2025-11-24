@@ -34,8 +34,8 @@
   
         conda install -c bioconda gatk4=4.1.4.1 -y
 # 三、原始数据处理pipeline
-* 数据指控
-* 修剪
-* 序列比对
-* 标记重复
-* 碱基质量重新校对
+* 数据质控 [step01_fastqc.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step01_fastqc.sh)
+* 修剪 [step02_trimming.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step02_trimming.sh)
+* 序列比对 [step03_alignment_trimmed.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step03_alignment_trimmed.sh)
+* 标记重复  [step04_mark_duplicates.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step04_mark_duplicates.sh)
+* 碱基质量重新校对  [step05_bqsr.sh](https://github.com/rwj0621/OFF-PEAK_ICR96_pipeline/blob/main/data_pipeline/step05_bqsr.sh)
