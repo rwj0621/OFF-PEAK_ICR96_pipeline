@@ -47,4 +47,17 @@
           --targets /data/renweijie/data/TSCP-target-BED.bed \
           --name ICR96_std_panel \
           --ref /data/share/liuyuxin_tanrenjie/ICR96/technology/hg19.fa 
-  
+* 02_coverage-count.sh
+
+        #自动生成并排序两列的list_BAM.txt文件
+        find /data/renweijie/ICR96/OFF-PEAK-std/step05_bqsr_bams -name "*_bqsr.bam" | sort | while read bam; do
+        sample_id=$(basename "$bam" | sed 's/_bqsr.bam//')
+        echo -e "$bam\t$sample_id"
+        done > list_BAM.txt
+
+        nohup bash /data/renweijie/ICR96/tools/OFF-PEAK-main/02_coverage-count.sh \
+          --listBAM /data/renweijie/ICR96/OFF-PEAK-std/step05_bqsr_bams/list_BAM.txt \
+          --mosdepth /data/renweijie/anaconda3/envs/ICR96-OFF-PEAK/bin/mosdepth \
+          --work /data/renweijie/ICR96/OFF-PEAK-std/ICR96-OFFPEAK-results/coverage1 \
+          --targetsBED /data/renweijie/ICR96/tools/OFF-PEAK-main/data/ICR96_std_panel1.bed > coverage1.log 2>&1 &
+
