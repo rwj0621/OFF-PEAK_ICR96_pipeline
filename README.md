@@ -60,4 +60,12 @@
           --mosdepth /data/renweijie/anaconda3/envs/ICR96-OFF-PEAK/bin/mosdepth \
           --work /data/renweijie/ICR96/OFF-PEAK-std/ICR96-OFFPEAK-results/coverage1 \
           --targetsBED /data/renweijie/ICR96/tools/OFF-PEAK-main/data/ICR96_std_panel1.bed > coverage1.log 2>&1 &
+* 03_OFF-PEAK.R
 
+        nohup Rscript /data/renweijie/ICR96/tools/OFF-PEAK-main/03_OFF-PEAK.R \
+          --output /data/renweijie/ICR96/OFF-PEAK-std/ICR96-OFFPEAK-results/cnv_results_50k \
+          --data /data/renweijie/ICR96/OFF-PEAK-std/ICR96-OFFPEAK-results/coverage/ALL.target.tsv \
+          --databasefile /data/renweijie/ICR96/tools/OFF-PEAK-main/data/data-hg19.RData \
+          --chromosome-plots \
+          --genome-plots \
+          --nb-plots 20 > cnv_analysis_50k.log 2>&1 &
