@@ -1,4 +1,4 @@
-# 一、环境创建及工具安装
+# 一、环境创建
 ## 创建环境
     conda create -n ICR96-OFF-PEAK python=3.9 -y
 ## 激活环境
